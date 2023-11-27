@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="voice">
+      <div class="voice__body">
+        <h2 class="voice__head">受講者に利用した理由を聞いてみました</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./images/voice01.png"
+                class="swiper-slide-image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/voice02.png"
+                class="swiper-slide-image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/voice03.png"
+                class="swiper-slide-image"
+              />
+            </div>
+          </div>
+          <!--div class="swiper-pagination"></div>
+          <!div class="swiper-button-prev__origin">
+            <img
+              src="./images/arrow-left.svg"
+              alt=""
+              class="swiper-button-prev-icon"
+            />
+          </div>
+          <div class="swiper-button-next__origin">
+            <img
+              src="./images/arrow-right.svg"
+              alt=""
+              class="swiper-button-prev-icon"
+            />
+          </div-->
+          <div class="swiper__scroll sp">scroll →</div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next__origin",
+          prevEl: ".swiper-button-prev__origin",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: { // ブレークポイント
+          600: { // 画面幅600px以上で適用
+            slidesPerView: 1,
+          },
+          1025: { // 画面幅1025px以上で適用
+            slidesPerView: 3,
+            spaceBetween: 40,
+          }
+        },
+        centeredSlides: true,
+      })
+    </script>
+  </body>
+</html>
